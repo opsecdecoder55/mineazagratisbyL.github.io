@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CashMiner Pro - Mine Your Fortune</title>
+    <meta name="description" content="Watch your digital fortune grow with CashMiner Pro">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-grid"></div>
+    <div class="particles" id="particles"></div>
+    
+    <!-- Floating Dollar Signs -->
+    <div class="floating-dollars" id="floatingDollars"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">💰</span>
+                <span class="logo-text">CashMiner<span class="pro">PRO</span></span>
+            </div>
+            <div class="status-badge online">
+                <span class="pulse"></span>
+                MINING ACTIVE
+            </div>
+        </header>
+
+        <!-- Main Mining Display -->
+        <main class="mining-display">
+            <!-- Balance Card -->
+            <div class="balance-card">
+                <div class="card-glow"></div>
+                <div class="balance-label">TOTAL MINED</div>
+                <div class="balance-amount">
+                    <span class="currency">$</span>
+                    <span class="amount" id="totalBalance">0.00</span>
+                </div>
+                <div class="balance-growth">
+                    <span class="growth-icon">📈</span>
+                    <span class="growth-text" id="growthRate">+$0.00/sec</span>
+                </div>
+            </div>
+
+            <!-- Mining Animation -->
+            <div class="mining-animation">
+                <div class="mining-ring ring-1"></div>
+                <div class="mining-ring ring-2"></div>
+                <div class="mining-ring ring-3"></div>
+                <div class="mining-core">
+                    <div class="pickaxe">⛏️</div>
+                </div>
+                <div class="coin-burst" id="coinBurst"></div>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-info">
+                        <div class="stat-value" id="hashRate">0</div>
+                        <div class="stat-label">Hash Rate</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🔥</div>
+                    <div class="stat-info">
+                        <div class="stat-value" id="blocksFound">0</div>
+                        <div class="stat-label">Blocks Mined</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💎</div>
+                    <div class="stat-info">
+                        <div class="stat-value" id="efficiency">0%</div>
+                        <div class="stat-label">Efficiency</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🚀</div>
+                    <div class="stat-info">
+                        <div class="stat-value" id="multiplier">1.0x</div>
+                        <div class="stat-label">Multiplier</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mining Progress -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <span>Mining Progress</span>
+                    <span id="progressPercent">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                    <div class="progress-glow"></div>
+                </div>
+                <div class="next-reward">
+                    Next block reward: <span id="nextReward">$0.00</span>
+                </div>
+            </div>
+
+            <!-- Control Button -->
+            <button class="boost-button" id="boostBtn">
+                <span class="boost-icon">⚡</span>
+                <span class="boost-text">BOOST MINING</span>
+                <div class="boost-ripple"></div>
+            </button>
+
+            <!-- History Section -->
+            <div class="history-section">
+                <div class="history-header">
+                    <span class="history-title">💸 Recent Earnings</span>
+                </div>
+                <div class="history-list" id="historyList">
+                    <!-- Will be populated by JS -->
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-stats">
+                <div class="footer-stat">
+                    <span class="footer-label">Session Time</span>
+                    <span class="footer-value" id="sessionTime">00:00:00</span>
+                </div>
+                <div class="footer-stat">
+                    <span class="footer-label">Network</span>
+                    <span class="footer-value network-status">🟢 Connected</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
